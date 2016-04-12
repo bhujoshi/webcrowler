@@ -1,5 +1,2 @@
-class Model:
-    tags=['script','link','img']
-    def __init__(self):
-        print self.tags
-obj = Model()
+open('page_content.html', 'w')
+    fid.write(page_content)
