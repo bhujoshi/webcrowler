@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ezeeport - A PERFECT SOLUTION FOR ALL YOUR LOGISTICS NEEDS</title>
+	<meta name="description" content="eZeePORT is an on-demand truck service in Delhi & NCR that intends to move your personal and business goods hassle free. We function 
+	with the aim of closing the gap between demand and supply of economical and transparent mini truck services to make relocation and logistics easy." />
+	<meta name="keywords" content="Transportation Service in Delhi, Transportation Service in Delhi NCR, Truck Rental, Logistics, Transportation Service" />
+	<meta name="author" content="ezeePort" />
+	<link href="css/uikit.gradient.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="img/ezeeprtFavicon.png"/>	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--<section class="top-header-nav uk-hidden-small">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-large-1-1">
+					<ul class="white font-size-14">
+						<li><span class="bold-font">Contact -</span> 9555-600-800</li>
+						<li><span class="bold-font">Email -</span> contact@ezeeport.com</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</section>-->
+	<header class="homepage">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-large-1-1">
+					<nav class="uk-navbar">
+						<a href="index.php" class="uk-navbar-brand uk-visible-large"><img style='padding-top:6px;' src="img/ezeeport-logo.png" alt=""/></a>
+						<div class="uk-navbar-flip">
+							<ul class="uk-navbar-nav uppercase uk-visible-large uk-nav-parent-icon">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.php">About us</a></li>
+								<li><a href="rate-card.php">Rate Card</a></li>
+								<li><a href="services.php">Services</a></li>
+								<li><a href="contact.php">Contact</a></li>
+								<li class="uk-parent" data-uk-dropdown="{mode:'click'}">
+									<a href="">Hi  User !</a>
+									<div class="uk-dropdown uk-dropdown-navbar">
+										<ul class="uk-nav uk-nav-navbar">
+																						<li><a href="#"  data-uk-modal="{target:'#registration-popup'}">Register</a></li>
+											<li class="uk-nav-divider"></li>
+											<li><a href="#" data-uk-modal="{target:'#login-popup'}">Login</a></li>
+											<li class="uk-nav-divider"></li>
+																					</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>	      
+				</div>
+				<div class="uk-width-large-1-1">
+					<a href="#mobile-nav" class="uk-navbar-toggle uk-hidden-large" data-uk-offcanvas></a>
+					<a href="index.php" class="uk-navbar-brand uk-navbar-center uk-hidden-large uk-img-preserve"><img src="img/ezeeport-logo.png"  width="125" height="96" alt=""/></a>
+					<div class="uk-offcanvas" id="mobile-nav">
+						<div class="uk-offcanvas-bar">
+							<ul class="uk-nav uk-nav-offcanvas uppercase bold-font uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.php">About us</a></li>
+								<li><a href="rate-card.php">Rate Card</a></li>
+								<li><a href="services.php">Services</a></li>
+								<li><a href="contact.php">Contact</a></li>
+								<li class="uk-parent"><a href="#">Hi User !</a>									<ul class="uk-nav-sub uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+										<li  class="uk-parent"><a href="#">Register</a>
+											<ul class="uk-nav uk-nav-offcanvas uk-form-stacked mobile-form">
+                                                                                             
+												<form class="uk-form" action='registration.php' method='post'>
+													<li>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-user"></i>
+																<input type="text" name='name' class="uk-form-large uk-form-width-large" placeholder="Name" id="" required>
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-lock"></i>
+																<input type="text" name='email' placeholder="Your Email ID" class="uk-form-large uk-form-width-large" id=""  required>
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-mobile"></i>
+																<input type="number"  name='number' placeholder="Contact Number" class="uk-form-large uk-form-width-large" id="" required>
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-lock"></i>
+																<input type="password" name='password' placeholder="Enter Password" class="uk-form-large uk-form-width-large" id="" required>
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-lock"></i>
+																<input type="password" name='con-password' placeholder="Confirm Password " class="uk-form-large uk-form-width-large" id="" required>
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls">
+																<input type="submit" class="uk-button uppercase" value="Register Now">
+															</div>
+														</div>
+													</li>
+												</form>
+											</ul>
+										</li>
+										<li class="uk-parent"><a href="#">Login</a>
+												<h5><div style="color:white" id="mob_err"></div></h5>
+											<ul class="uk-nav uk-nav-offcanvas uk-form-stacked mobile-form">
+                                                                                            	<form class="uk-form" action="login.php" method="post">
+													<li>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-user"></i>
+																<input type="text" name='email' placeholder="User Name" class="uk-form-large uk-form-width-large" id="user_name1"  required>
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls uk-form-icon">
+																<i class="uk-icon-lock"></i>
+																<input type="password" name='password' placeholder="Enter Password" class="uk-form-large uk-form-width-large" id="password1"  required >
+															</div>
+														</div>
+														<div class="uk-form-row">
+															<div class="uk-form-controls">
+                                                                                                                            <input type="submit" style="color:#00B5D3" class="uk-button uppercase" value="Login Now" id="login1">
+															</div>
+														</div>
+													</li>
+												</form>
+											</ul>
+										</li>
+                                                                                									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-1 header-title margin-bottom-30 uk-text-center">
+					<h1 class="font-size-32 uk-text-center uppercase white regular-font margin-bottom-30">A PERFECT SOLUTION FOR ALL YOUR LOGISTICS NEEDS</h1>
+					<span class="uk-text-center bold-font font-size-48 margin-bottom-60">anytime, anywhere!!</span>
+					<h6 class="font-size-23 uk-text-center white regular-font margin-bottom-20">Instantly book a mini truck!! Call us at </h6>
+					<p class="contact-num font-size-23 white regular-font">9555-600-800</p>
+					<!--<p  style='margin-bottom: 20px;'> class="uk-text-center"><a  href="#bottom" data-uk-smooth-scroll="{offset:-610}" class="uk-button font-size-17 uk-button-large uppercase" Book Now</a></p>-->
+				</div>				
+		</div>
+	</header>
+<!-- registration and login popup starts-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#login').click(function() {
+
+            var username=$("#user_name").val();
+            var password=$("#password").val();
+            var dataString = 'email='+username+'&password='+password;
+            //data: { email:username,password:password },
+            if($.trim(username).length>0 && $.trim(password).length>0) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data: dataString,
+                    cache: false, 
+                   beforeSend: function(){ $("#login").val('Connecting...');},
+                    success: function(data){
+                    	
+                        if(data=='response') {
+                            window.location.href = "profile.php";
+                        } else {
+                            $("#add_err").html("Invalid username or password");
+							document.getElementById('login').value='LOGIN NOW';
+                        }
+                    }
+
+                });
+            }
+           return false;
+		});
+
+		 $('#login1').click(function() {
+
+            var username=$("#user_name1").val();
+            var password=$("#password1").val();
+            var dataString = 'email='+username+'&password='+password;
+            //data: { email:username,password:password },
+            if($.trim(username).length>0 && $.trim(password).length>0) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data: dataString,
+                    cache: false, 
+                   beforeSend: function(){ $("#login1").val('Connecting...');},
+                    success: function(data){
+                    	
+                        if(data=='response') {
+                            window.location.href = "profile.php";
+                        } else {
+                            $("#mob_err").html("Invalid username or password");
+							
+                        }
+                    }
+
+                });
+            }
+           return false;
+		});
+
+		  
+    });
+	</script>
+
+
+	<div id="login-popup" class="uk-modal">
+		
+		<form class="uk-form" action="login.php" method="post" id="login-form">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close uk-close-alt"></a>
+				<div class="uk-modal-header">
+
+					<h5 class="font-size-23 white margin-bottom-20 capitalize white bold-font">Login Now</h5>
+					<div id="add_err"> </div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 responsive-margin uk-form-icon">
+						<i class="uk-icon-user uk-icon-small"></i>
+						<input type="text" name='email' onkeypress="return validate_number(this.value);"  class="uk-form-large uk-width-1-1 form-control" placeholder="Enter Mobile" id="user_name"  required >
+					</div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 uk-form-icon">
+						<i class="uk-icon-lock uk-icon-small"></i>
+						<input type="password" name='password' class="uk-form-large uk-width-1-1 form-control" placeholder="Enter Password" id="password"  required >
+					</div>
+				</div>
+				<div class="uk-modal-footer">
+					<div class="uk-grid">
+						<div class="uk-width-medium-6-10" style="    position: relative;
+    top: -21px;">
+							<p class="font-size-17 regular-font line-height-48"><a href="" data-uk-modal="{target:'#registration-popup'}">Create an account</a></p>
+							<p class="font-size-17 regular-font" > <a href="" data-uk-modal="{target:'#forget-password'}">Forget Password ?</a></p>
+						</div>
+						<div class="uk-width-medium-4-10">
+							<input type="submit" value="Login Now" id="login">
+						</div>
+					</div>
+				</div>            
+			</div>
+		</form>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="registration-popup" class="uk-modal">
+		<form class="uk-form" action='registration.php' method='post'>
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close uk-close-alt"></a>
+				<div class="uk-modal-header">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize white bold-font"> Register yourself</h5>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 responsive-margin uk-form-icon">
+						<i class="uk-icon-user uk-icon-small"></i>
+						<input type="text" name='name' class="uk-form-large uk-width-1-1 form-control" placeholder="Name" id="" required>
+					</div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 uk-form-icon">
+						<i class="uk-icon-envelope uk-icon-small"></i>
+						<input type="email" name='email'  class="uk-form-large uk-width-1-1 form-control" placeholder="Your Email ID" id="" required>
+					</div>
+				</div>
+
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 uk-form-icon">
+						<i class="uk-icon-mobile uk-icon-small"></i>
+						<input type="number" name='number' onkeypress="return validate_number(this.value);" class="uk-form-large uk-width-1-1 form-control" placeholder="Contact Number" id="" required>
+					</div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 uk-form-icon">
+						<i class="uk-icon-lock uk-icon-small"></i>
+						<input type="password" name='password' class="uk-form-large uk-width-1-1 form-control" placeholder="Enter Password  " id="" required>
+					</div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 uk-form-icon">
+						<i class="uk-icon-lock uk-icon-small"></i>
+						<input type="password" name='con-password' class="uk-form-large uk-width-1-1 form-control" placeholder="Confirm Password  " id="" required>
+					</div>
+				</div>
+				<div class="uk-modal-footer">
+					<div class="uk-grid">
+						<div class="uk-width-medium-6-10">
+							<p class="font-size-17 regular-font line-height-48"><a href="" data-uk-modal="{target:'#login-popup'}">Already have an account</a></p>
+						</div>
+						<div class="uk-width-medium-4-10">
+							<input type="submit" value="Register Now">
+						</div>
+					</div>
+				</div>            
+			</div>
+		</form>
+	</div>
+	<!-- registration and login popup ends-->
+
+	 	<div class="uk-width-medium-1-8 uk-form-icon" >
+			</div>		<div class="uk-width-1-1">
+		<center><h3 class="" style="color:#00b5d3;"></h3></center>
+	</div>
+	<section class="booking-form">
+			
+		<div class="uk-container uk-container-center">
+			<form class="uk-form" id='form1' action='booking-form.php' method='post'>
+				<div class="uk-grid">
+					<div class="uk-width-medium-8-10">
+						<div class="uk-grid">
+							<div class="uk-width-medium-1-4 responsive-margin uk-form-icon">
+								<i class="uk-icon-home uk-icon-small"></i>
+								<input id='location1' name='pick_up' type="text" class="uk-form-large uk-width-1-1" placeholder="Pickup Point" value='' required>
+								<input type=hidden name='pick_up_lat' value="" id='pick_up_lat'>
+								<input type=hidden name='pick_up_place_id' value="" id='pick_up_place_id'>
+								<input type=hidden name='pick_up_log'  value="" id='pick_up_log'>
+							</div>
+							<div class="uk-width-medium-1-4 uk-form-icon responsive-margin">
+								<i class="uk-icon-map-marker"></i>
+								<input id='location2' name='drop_off' type="text" class="uk-form-large uk-width-1-1" placeholder="Drop Point" value='' required>
+								<input type=hidden name='drop_off_lat' value="" id='drop_off_lat'>
+								<input type=hidden name='drop_off_place_id' value="" id='drop_off_place_id'>
+								<input type=hidden name='drop_off_log' value="" id='drop_off_log'>
+							</div>
+							<div class="uk-width-medium-1-4 responsive-margin">
+								<select class="uk-form-large uk-width-1-1" name='category' required>
+									<option value='' >Select Vehicle</option>
+										
+                                                                         <option value="1"   >
+                                                                             CHAMPION </option>
+										
+                                                                         <option value="2"   >
+                                                                             ACE </option>
+										
+                                                                         <option value="3"   >
+                                                                             ECCO  </option>
+										
+                                                                         <option value="4"   >
+                                                                             TATA 407 </option>
+										
+                                                                         <option value="7"   >
+                                                                             CANTER - 14 FT </option>
+										
+                                                                         <option value="5"   >
+                                                                             PICK UP - 8 FT </option>
+																		
+								</select>
+							</div>
+							
+							<div class="uk-width-medium-1-4 uk-form-icon responsive-margin">
+								<i class="uk-icon-fa-fa-mobile"></i>
+								
+									<input id='mobile' name='phone' onkeypress="return validate_number(this.value);"  value="" type="text" class="uk-form-large uk-width-1-1" autocomplete='off' placeholder="Mobile"  required>
+							
+							</div>
+							
+						</div>
+					</div>
+					<div class="uk-width-medium-2-10">
+						<input type="submit" value="Book Now">
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section class="how-it-works">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid margin-bottom-60">
+				<div class="uk-width-1-1">
+					<h1 class="font-size-32 uk-text-center bold-font uppercase margin-bottom-30 blue">how it works</h1>
+					<h5 class="white font-size-20 regular-font uk-text-center line-height-30">We function with the aim of closing the gap between demand and supply of economical and transparent mini truck <br/> services to make relocation and logistics easy</h5>
+				</div>
+			</div>
+			<div class="uk-grid">
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h6 class="uk-text-center margin-bottom-20"><img src="img/plan-route.png"alt="" class="uk-border-circle" /></h6>
+					<h5 class="font-size-23 white uk-text-center margin-bottom-20 capitalize blue bold-font how-work-line-height">Plan your route</h5>
+					<p class="white font-size-17 regular-font uk-text-center">Book through our website or call, center and get an instant quote.</p>
+				</div>
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h6 class="uk-text-center margin-bottom-20"><img src="img/instant-match.png"alt="" class="uk-border-circle" /></h6>
+					<h5 class="font-size-23 white uk-text-center margin-bottom-20 capitalize blue bold-font how-work-line-height">Get instant match</h5>
+					<p class="white font-size-17 regular-font uk-text-center">Our technology finds a perfect match for you with minimal waiting time.</p>
+				</div>
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h6 class="uk-text-center margin-bottom-20"><img src="img/stay-connected.png"alt="" class="uk-border-circle" /></h6>
+					<h5 class="font-size-23 white uk-text-center margin-bottom-20 capitalize blue bold-font how-work-line-height">Stay connected</h5>
+					<p class="white font-size-17 regular-font uk-text-center">The nearest mini truck is, allocated and details shared to, the client.</p>
+				</div>
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h6 class="uk-text-center margin-bottom-20"><img src="img/track-location.png"alt="" class="uk-border-circle" /></h6>
+					<h5 class="font-size-23 white uk-text-center margin-bottom-20 capitalize blue bold-font how-work-line-height">Track Anytime</h5>
+					<p class="white font-size-17 regular-font uk-text-center">App/Web based tracking, activated. Goods reaches, destination.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="services margin-bottom-60">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-1-1 uk-text-center">
+					<h1 class="white font-size-32 uk-text-center bold-font uppercase margin-bottom-30">Services we offer</h1>
+				</div>
+			</div>
+			<div class="uk-grid">
+				<div class="uk-width-medium-1-2"> 
+					<ul class="white font-size-23">
+						<li><span><i class="uk-icon-check"></i></span>House & Office Relocation</li>
+						<li><span><i class="uk-icon-check"></i></span>Furniture & Home Appliances Movement</li>
+						<li><span><i class="uk-icon-check"></i></span>Moving goods IN & OUT of Warehouse</li>
+						<li><span><i class="uk-icon-check"></i></span>Custom good Delivery</li>
+						<li><span><i class="uk-icon-check"></i></span>Construction Material Movement</li>
+						<li><span><i class="uk-icon-check"></i></span>Any movement of something else?</li>
+					</ul>
+				</div>
+				<div class="uk-width-medium-1-2">
+					<p><img src="img/tata-ace.png" alt=""/></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="cover-area margin-bottom-60">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-1-1 uk-text-center">
+					<form class="uk-form">
+						<h1 class="blue font-size-32 uk-text-center bold-font uppercase margin-bottom-30">Area we cover</h1>
+						<p class=" white font-size-17 regular-font uk-text-center margin-bottom-10">With our HQ based in NOIDA we cover <br/>all 5 cities of NCR.</p>
+						<select class="uk-form-large uk-width-1-1">
+							<option>New Delhi</option>
+							<option>Gurgaon</option>
+							<option>Noida</option>
+							<option>Faridabad</option>
+							<option>Ghaziabad</option>
+						</select>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+    
+    
+                <div id="FAQ" class="uk-modal">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close"></a>
+				<h5 class="font-size-23 white margin-bottom-20 capitalize blue bold-font">FAQs</h5>
+					<h5 class="font-size-20 white margin-bottom-20 blue">Bookings:</h5>
+                                        <p class="font-size-14 regular-font margin-bottom-10 line-height-24">
+                                        <strong>Q: What if the truck doesn't show up?</strong><br/>
+                                        A: In case the vehicle you booked doesn't show up, we will do arrangement of other truck.   
+                                        </p>
+                                        <p class="font-size-14 regular-font margin-bottom-10 line-height-24">
+                                        <strong>Q: What if the truck shows up late?</strong><br/>
+                                        A: We try our best to ensure our partners reach our customers on time. but in case of delays, do call us and we will help you out by either providing an alternate vehicle.  
+                                        </p>
+                                        <h5 class="font-size-20 white margin-bottom-20 blue">
+                                        Payment:
+                                        </h5>
+                                        <p class="font-size-14 regular-font margin-bottom-10 line-height-24">
+                                        <strong>Q: How to do payment?</strong><br/>
+                                        A: By cash to driver.
+
+                                        <p class="font-size-14 regular-font margin-bottom-10 line-height-24">
+                                        <strong>Q:Can we use credit/debit card?</strong><br/>
+                                        A: As of now no, in future you may.  
+                                        </p>
+                                        <h5 class="font-size-20 white margin-bottom-20 blue">
+                                        Cancellations:
+                                        </h5>
+                                        <p class="font-size-14 regular-font margin-bottom-10 line-height-24">
+                                        <strong>Q: Can I cancel my booking?</strong><br/>
+                                        A: Yes, you can but it should be before driver starts from his location, if driver in your place you have to pay the driver base fair.  
+                                        </p>
+                                        <p class="font-size-14 regular-font margin-bottom-10 line-height-24">
+                                        <strong>Q: How do I cancel my booking?</strong><br/>
+                                        A: By calling our call center number.
+                                        </p>
+			</div>
+		</div>
+    
+
+<div id="disclaimer" class="uk-modal">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close uk-close-alt"></a>
+				<div class="uk-modal-header">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize white bold-font">Disclaimer</h5>
+				</div>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">1. The Application is delivered to you on an “as is“ is basis and although eZeePORT has used its best endeavours to ensure that the Application will work properly on your mobile device, eZeePORT does not warrant the performance of the eZeePORT nor the compatibility of the Application with your mobile device.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">2. eZeePORT does not warrant the availability of the Services, the availability of vehicles through the use of the Services, the accuracy of the data or information provided as part of the Services or the quality of the services of the Participating vehicles.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">3. eZeePORT shall not be liable to you for any damages, claims or costs whatsoever including any consequential, indirect, incidental damages or any loss of profit or damages to your mobile device as a result of your use of the Services or your installation and / or execution of the Software even if eZeePORT or its representative has been advised of the possibility of such loss, damage or claim.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">4. eZeePORT shall not be liable for any loss or damages, including any injury which you may suffer as a result of your vehicles journey in a Participating Vehicles hired through the Services and all your rights in relation thereto and in relation to the contract for hire between you and the relevant Participating vehicles shall be a matter between you and the relevant Participating vehicles. The foregoing limitations and exclusions apply to the extent permitted by law.</p>
+			</div>
+		</div>
+		<div id="term-condition" class="uk-modal">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close uk-close-alt"></a>
+				<div class="uk-modal-header">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize white bold-font">Terms & Conditions</h5>
+				</div>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">1. It is expressly made clear to the customers that the Company does not own any vehicle registered with it for logistics purpose, nor does it directly or indirectly employs any drivers for the vehicle. Third parties supply all vehicle and drivers and the Company disclaims any and all liability in respect of the drivers and the Vehicle alike.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">2. The Company has right to use the customer contact information for its own marketing purposes. The Company may send regular SMS updates to the mobile numbers registered with it.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">3. The courts of noida, India shall have the sole and exclusive jurisdiction in respect of any matters arising from the use of the Services offered by Company or the agreement or arrangement between Company and the Customer.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">4. eZeePORT shall not be liable to you for any damages, claims or costs whatsoever including any consequential, indirect, incidental damages or any loss of profit or damages to your mobile device as a result of your use of the Services or your installation and / or execution of the Software even if eZeePORT or its representative has been advised of the possibility of such loss, damage or claim.</p>
+				<p class="font-size-14 regular-font margin-bottom-10 line-height-24">5. eZeePORT shall not be liable for any loss or damages, including any injury which you may suffer as a result of your vehicles journey in a Participating Vehicles hired through the Services and all your rights in relation thereto and in relation to the contract for hire between you and the relevant Participating vehicles shall be a matter between you and the relevant Participating vehicles. The foregoing limitations and exclusions apply to the extent permitted by law.</p>
+			</div>
+		</div>
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize blue bold-font">Reach Us</h5>
+					<p class="white font-size-14 regular-font margin-bottom-10 line-height-24">Sector-9, Gurgaon, Haryana </p>
+					<p class="white font-size-14 bold-font line-height-24">India</p>
+				</div>
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize blue bold-font">Links</h5>
+					<ul class="font-size-14 line-height-24">
+                                                <li><a href="#" data-uk-modal="{target:'#FAQ'}">FAQs</a></li>
+						<li><a href="#" data-uk-modal="{target:'#disclaimer'}">Disclaimer</a></li>
+						<li><a href="#"  data-uk-modal="{target:'#term-condition'}">Terms & Condition</a></li>
+					</ul>
+				</div>
+				<div class="uk-width-medium-1-4 responsive-margin">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize blue bold-font">Follow us</h5>
+					<ul class="font-size-14 line-height-24 social-icon">
+						<li><a href="https://www.facebook.com/ezeeport/" target='_blank' ><i class="uk-icon-facebook"></i></a></li>
+						<li><a href="#"><i class="uk-icon-google-plus"></i></a></li>
+						<li><a href="#"><i class="uk-icon-pinterest"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/ezeeport" target='_blank' ><i class="uk-icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+				<div class="uk-width-medium-1-4">
+					<h5 class="font-size-23 white margin-bottom-20 capitalize blue bold-font">Copyright</h5>
+					<p class="white font-size-14 regular-font margin-bottom-30 line-height-24">2015 &copy ezeePORT. All rights reserved ezeePORT is a trading brand of <b> City Span Logistics</b></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer><script src="js/uikit.min.js"></script>
+<script src="js/core/modal.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;libraries=places"></script> 
+					
+					<script type="text/javascript">
+					
+						 function validate_number(val){
+						   if( isNaN(val + String.fromCharCode(event.keyCode) )){
+							   return false;
+						   }
+						   
+						    if(val.length >= 10){
+								return false;
+							}
+					   }	
+						//Autocomplete variables
+						var input = document.getElementById('location1');
+						var searchform = document.getElementById('form1');
+						var place;
+						var autocomplete = new google.maps.places.Autocomplete(input);
+						
+						//Google Map variables
+						var map;
+						var marker;
+						
+						//Add listener to detect autocomplete selection
+						google.maps.event.addListener(autocomplete, 'place_changed', function () {
+							place = autocomplete.getPlace();
+							//console.log(place);
+							document.getElementById("pick_up_place_id").value = place.place_id;
+							document.getElementById("pick_up_lat").value = place.geometry.location.lat();
+							document.getElementById("pick_up_log").value = place.geometry.location.lng();
+							document.getElementById("pick_up_address").value = place.name;
+						});
+						
+						
+						
+						//Add listener to search
+						/*searchform.addEventListener("submit", function() {
+							var newlatlong = new google.maps.LatLng(place.geometry.location.lat(),place.geometry.location.lng());
+							map.setCenter(newlatlong);
+							marker.setPosition(newlatlong);
+							map.setZoom(12);
+							
+							
+						});*/
+						
+						//Reset the inpout box on click
+						input.addEventListener('click', function(){
+							input.value = "";
+							
+						});
+						
+						
+						
+						/*function initialize() {
+							var myLatlng = new google.maps.LatLng(51.517503,-0.133896);
+							var mapOptions = {
+							zoom: 1,
+							center: myLatlng
+							}
+							map = new google.Map(document.getElementById('map-canvas'), mapOptions);
+							maps
+							marker = new google.maps.Marker({
+							position: myLatlng,
+							map: map,
+							title: 'Main map'
+							});
+							}
+							
+						google.maps.event.addDomListener(window, 'load', initialize);*/
+						
+					</script>
+					<script type="text/javascript">
+						//Autocomplete variables
+						var input1 = document.getElementById('location2');
+						var searchform1 = document.getElementById('form1');
+						var place1;
+						var autocomplete1 = new google.maps.places.Autocomplete(input1);
+						
+						//Google Map variables
+						var map1;
+						var marker1;
+						
+						//Add listener to detect autocomplete selection
+						google.maps.event.addListener(autocomplete1, 'place_changed', function () {
+							place1 = autocomplete1.getPlace();
+							console.log(place1);
+							document.getElementById("drop_off_place_id").value = place1.place_id;
+							document.getElementById("drop_off_lat").value = place1.geometry.location.lat();
+							document.getElementById("drop_off_log").value = place1.geometry.location.lng();
+							document.getElementById("drop_off_address").value = place1.name;
+							if(place2.name!=''){
+								calculateRoute(place1.name, place2.name);
+								alert(place2.name);
+							}
+						});
+						
+						
+						
+						
+						
+						//Add listener to search
+						/* searchform1.addEventListener("submit", function() {
+							var newlatlong = new google.maps.LatLng(place1.geometry.location.lat(),place.geometry.location.lng());
+							map1.setCenter(newlatlong);
+							marker1.setPosition(newlatlong);
+							map1.setZoom(12);
+							
+						});*/
+						
+						//Reset the inpout box on click
+						input1.addEventListener('click', function(){
+							input1.value = "";
+							
+						});
+						
+						
+						
+						/* function initialize1() {
+							var myLatlng = new google.maps.LatLng(51.517503,-0.133896);
+							var mapOptions = {
+							zoom: 1,
+							center: myLatlng
+							}
+							map1 = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+							
+							marker1 = new google.maps.Marker({
+							position: myLatlng,
+							map: map,
+							title: 'Main map'
+							});
+							}
+							
+						google.maps.event.addDomListener(window, 'load', initialize1);*/
+						
+					</script>
+
+</body>
+</html>
