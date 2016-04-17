@@ -1,5 +1,7 @@
 import urllib2
-from FileModel import FileModel 
+import urllib
+from FileModel import FileModel
+
 class Model(FileModel):
     tags=['script','link','img']
     str_files_path=[]
@@ -17,14 +19,22 @@ class Model(FileModel):
         print ("Downloading.................");    
         #print self.tags_positions
         self.file_full_src()
-        print(self.str_files_path)
+        #print(self.str_files_path)
+        #print(self.str_img_path)
         for file_path in self.str_files_path:
             full_path=url+'/'+file_path
+            #print(full_path)
             url_obj = urllib2.urlopen(full_path)
             all_html_str = url_obj.read()
             #print (all_html_str)
             self.create_dir_or_file('myproject/'+file_path)
             self.write_file(all_html_str)
+
+        for file_path in self.str_img_path:
+            full_path=url+'/'+file_path
+            #print (full_path)
+            self.create_dir_or_file('myproject/'+file_path)
+            urllib.urlretrieve(full_path, 'myproject/'+file_path)
             
         print("your site is download sucessfully!");    
             
