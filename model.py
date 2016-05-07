@@ -10,6 +10,10 @@ class Model(FileModel):
     all_html_str=None
     #constructer funtion for class 
     def __init__(self,url):
+        self.default(url)
+            
+    #default function
+    def default(self,url):
         response = urllib2.urlopen(url)
         self.all_html_str = response.read()
         self.create_dir_or_file('myproject/index.html')
@@ -21,14 +25,19 @@ class Model(FileModel):
         self.file_full_src()
         #print(self.str_files_path)
         #print(self.str_img_path)
+        
         for file_path in self.str_files_path:
+                
             full_path=url+'/'+file_path
             #print(full_path)
             url_obj = urllib2.urlopen(full_path)
             all_html_str = url_obj.read()
-            #print (all_html_str)
+            #check for css file
+            if self.check_tag_match(file_path[-3:],'css'):
+                self.get_file_path_from_css_file(all_html_str)
             self.create_dir_or_file('myproject/'+file_path)
             self.write_file(all_html_str)
+                     
 
         for file_path in self.str_img_path:
             full_path=url+'/'+file_path
@@ -36,9 +45,39 @@ class Model(FileModel):
             self.create_dir_or_file('myproject/'+file_path)
             urllib.urlretrieve(full_path, 'myproject/'+file_path)
             
-        print("your site is download sucessfully!");    
             
+        print("your site is download sucessfully!");
         
+    #get image or file path from css file
+    def get_file_path_from_css_file(self,file_str):
+        i =0
+        while (  i < len( file_str )  ):
+            if (file_str[i:i+4]=='url(' or file_str[i:i+5]=='url (' ) :
+                i=i+3
+                path_and_index=self.get_full_url_using_index(i,file_str)
+                i=path_and_index['index'];
+            i = i + 1
+                
+    #return url path string recuresive function
+    def get_full_url_using_index(self,index,file_str):
+        start_index=0
+        i = index
+        myList={}
+        while (   i < len( file_str ) ):
+            if (file_str[i:i+1]=='"' or file_str[i:i+1]=="'") :
+                if( start_index != 0):
+                    end_index=i
+                    break;
+                start_index=i+1
+                
+            i = i + 1
+            
+        path=file_str[start_index:end_index]
+        print(path)
+        myList['index']=index
+        myList['path']=path
+        return myList
+                
     #check if tag is match 
     def check_tag_match( self, html_str, tag):
         if html_str == tag:
