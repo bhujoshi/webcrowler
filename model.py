@@ -45,18 +45,23 @@ class Model(FileModel):
         for file_path in self.file_paths_inside_css:
             
             if(self.check_tag_match(file_path[0:3],'../')):
-                full_path=url+'/'+file_path[4:]
-                file_path=file_path[4:]
+                full_path=url+'/'+file_path[3:]
+                file_path=file_path[3:]
                 
             else:
                 full_path=url+'/css/'+file_path
                 
-            if(self.check_tag_match(file_path[0:3],'http')==False):                    
-                url_obj = urllib2.urlopen(full_path)
-                all_html_str = url_obj.read()
-                self.create_dir_or_file('myproject/'+file_path)
-                self.write_file(all_html_str)
+            if(self.check_tag_match(file_path[0:4],'http')==False):                    
+                try:
+                    url_obj = urllib2.urlopen(full_path)
+                    all_html_str = url_obj.read()
+                    self.create_dir_or_file('myproject/'+file_path)
+                    urllib.urlretrieve(full_path, 'myproject/'+file_path)
             
+                except Exception  as inst:
+                    print("url not found "+full_path);     
+
+                
         for file_path in self.str_img_path:
             full_path=url+'/'+file_path
             #print (full_path)
@@ -198,4 +203,4 @@ class Model(FileModel):
             
         
     
-obj = Model('http://ezeeport.com')
+obj = Model('http://myshuttlecar.com')
