@@ -40,7 +40,7 @@ class Model(FileModel):
             self.create_dir_or_file('myproject/'+file_path)
             self.write_file(all_html_str)
 
-        #print(self.file_paths_inside_css)             
+        print(self.file_paths_inside_css)             
         #download images and import files inside css files 
         for file_path in self.file_paths_inside_css:
             
@@ -55,8 +55,12 @@ class Model(FileModel):
                 try:
                     url_obj = urllib2.urlopen(full_path)
                     all_html_str = url_obj.read()
-                    self.create_dir_or_file('myproject/'+file_path)
-                    urllib.urlretrieve(full_path, 'myproject/'+file_path)
+                    if(all_html_str == ''):
+                        self.create_dir_or_file('myproject/'+file_path)
+                        urllib.urlretrieve(full_path, 'myproject/'+file_path)
+                    else:
+                        self.create_dir_or_file('myproject/'+file_path)
+                        self.write_file(all_html_str)
             
                 except Exception  as inst:
                     print("url not found "+full_path);     
@@ -85,6 +89,14 @@ class Model(FileModel):
                 
                 self.file_paths_inside_css.append(path_and_index['path'])
                 i=path_and_index['index'];
+            if (file_str[i:i+7]=='@import' ) :
+                i=i+7
+                path_and_index=self.get_full_url_using_index(i,file_str)
+                if(path_and_index['path'] != '' ):
+                    path_and_index=self.get_full_url_using_index_main(i,file_str)
+                    print(path_and_index)
+                self.file_paths_inside_css.append(path_and_index['path'])
+                i=path_and_index['index'];
             i = i + 1
         #print(self.file_paths_inside_css)    
                 
@@ -103,6 +115,26 @@ class Model(FileModel):
             i = i + 1
             
         path=file_str[start_index+1:end_index-1]
+        #print(path)
+        myList['index']=index
+        myList['path']=path
+        return myList
+
+    #return url path string recuresive function
+    def get_full_url_using_index_main(self,index,file_str):
+        start_index=0
+        i = index
+        myList={}
+        while (   i < len( file_str ) ):
+            if (file_str[i:i+1]=='"' or file_str[i:i+1]=="'") :
+                if( start_index != 0):
+                    end_index=i
+                    break;
+                start_index=i+1
+                
+            i = i + 1
+            
+        path=file_str[start_index:end_index]
         #print(path)
         myList['index']=index
         myList['path']=path
